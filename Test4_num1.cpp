@@ -3,13 +3,15 @@
 
 using namespace std;
 
-int square(double num);
-double sqrroot(double num);
+int Square(double num);
+double Sqrroot(double num);
 
 int main()
 {
 	const int size = 3;
 	double num[size];
+	
+	cout << "Please enter " << size << " numbers:" << endl;
 
 	for (int i = 0; i < size; i++)
 	{
@@ -21,11 +23,11 @@ int main()
 		if (num[i] < 0)
 		{
 
-			num[i] = square(num[i]);
+			num[i] = Square(num[i]);
 		}
 		else if (num[i] > 0)
 		{
-			num[i] = sqrroot(num[i]);
+			num[i] = Sqrroot(num[i]);
 		}
 	}
 	for (int i = 0; i < size; i++)
@@ -35,12 +37,12 @@ int main()
 	return 0;
 }
 
-int square(double num)
+int Square(double num)
 {
 	return (pow(num, 2));
 }
 
-double sqrroot(double num)
+double Sqrroot(double num)
 {
 	return (sqrt(num));
 }
